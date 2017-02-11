@@ -1,11 +1,13 @@
-html, body {
+body,
+html {
   margin: 0;
   padding: 0;
 }
 
 body {
-  color: #636265;
-  background-color: #F9F9F9;
+  font-family: Helvetica, sans-serif;
+  color: #f9f9f9;
+  background-color: rgba(232, 49, 81, 0.9);
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -13,6 +15,102 @@ body {
   min-height: 500px;
   -webkit-tap-highlight-color: transparent;
   transform: translate3d(0, 0, 0);
+}
+body .home-base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+body .home-base .title-icon {
+  position: absolute;
+  top: 18%;
+}
+body .home-base .title-home {
+  height: 60px;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font-size: 48px;
+  font-weight: bold;
+}
+body .home-base .g-signin2 {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+body .home-base .g-signin2 .abcRioButton {
+  height: 50px !important;
+  width: 60vw !important;
+  border-radius: 2px;
+}
+body .home-base .g-signin2 .abcRioButton .abcRioButtonIcon {
+  height: inherit;
+  padding: 0 !important;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .home-base .g-signin2 .abcRioButton .abcRioButtonIcon div {
+  width: 25px !important;
+  height: 25px !important;
+}
+body .home-base .g-signin2 .abcRioButton .abcRioButtonIcon div svg {
+  width: 25px !important;
+  height: 25px !important;
+}
+body .home-base .g-signin2 .abcRioButton .abcRioButtonContents {
+  height: inherit;
+  font-size: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .home-base .sign-in {
+  pointer-events: none;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 2px;
+}
+body .home-base .sign-in .button {
+  height: inherit;
+  padding: 0 !important;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .home-base .sign-in .button .icon {
+  width: 25px !important;
+  height: 25px !important;
+}
+body .home-base .sign-in .button .icon svg {
+  width: 25px !important;
+  height: 25px !important;
+}
+body .home-base .sign-in .text-container {
+  height: 50px !important;
+  width: 48vw !important;
+}
+body .home-base .sign-in .text-container .text {
+  color: #757575;
+  height: inherit;
+  font-size: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #map {
