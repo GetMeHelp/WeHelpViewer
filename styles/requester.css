@@ -20,7 +20,7 @@ body .content-container #map {
   width: 100vw;
 }
 body .content-container .function-container {
-  height: 35vh;
+  height: calc(35vh - 60px);
   width: inherit;
 }
 body .content-container .function-container .buttons {
@@ -29,8 +29,8 @@ body .content-container .function-container .buttons {
   justify-content: space-around;
 }
 body .content-container .function-container .buttons .help-button {
-  width: 90px;
-  height: 90px;
+  width: 13vh;
+  height: 13vh;
   background-color: #E83151;
   margin-top: 80px;
   border-radius: 50%;
@@ -45,15 +45,15 @@ body .content-container .function-container .buttons .help-button {
   line-height: 1.2;
 }
 body .content-container .function-container .buttons .help-button.ambulance-button img {
-  width: 60px;
+  width: 70%;
 }
 body .content-container .function-container .buttons .help-button.police-button img {
-  width: 70px;
+  width: 75%;
 }
 body .content-container .function-container .buttons .help-button.helpMe-button {
   margin-top: 20px;
-  width: 130px;
-  height: 130px;
+  width: 18vh;
+  height: 18vh;
 }
 body .content-container .function-container .gettingHelp-container {
   width: inherit;
@@ -95,17 +95,28 @@ body .content-container .function-container .gettingHelp-container .placeholder-
   font-size: 14px;
   color: rgba(86, 86, 86, 0.5);
 }
-body .content-container .function-container .gettingHelp-container .send-detail-button {
-  margin: 10px 0;
+body .content-container .function-container .gettingHelp-container .detail-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+}
+body .content-container .function-container .gettingHelp-container .detail-buttons .send-detail-button, body .content-container .function-container .gettingHelp-container .detail-buttons .got-help-button {
+  margin: 10px 5px 10px 0;
   height: 50px;
   border-radius: 2px;
-  width: calc(100% - 40px);
   color: #F9F9F9;
+  width: 70%;
   background-color: #E83151;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 3px 0 #bbb;
+}
+body .content-container .function-container .gettingHelp-container .detail-buttons .got-help-button {
+  margin: 10px 0;
+  width: 30%;
+  background-color: #3F8D16;
 }
 body .content-container .function-container .help-request-container {
   display: flex;
