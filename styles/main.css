@@ -112,6 +112,10 @@ body .home-base .sign-in .text-container .text {
   justify-content: center;
   align-items: center;
 }
+body .home-base .next {
+  position: absolute;
+  bottom: 20%;
+}
 
 #map {
   height: 70vh;
