@@ -1,130 +1,181 @@
-@import 'constants.scss';
-@import 'mixins.scss';
-
-@include font-face(roboto-regular);
-@include font-face(OpenSans-Semibold);
-@include font-face(OpenSans-Regular);
-
 body {
-  font-family: OpenSans-Regular, Helvetica, sans-serif;
-  color: $font-color;
-  background-color: $palette_white;
+  font-family: Helvetica, sans-serif;
+  color: #636265;
+  background-color: #F9F9F9;
   margin: 0;
   width: 100vw;
   height: 100vh;
   min-width: 300px;
   min-height: 500px;
   -webkit-tap-highlight-color: transparent;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   position: relative;
-
-  .content-container {
-    position: absolute;
-    top: 60px;
-    #map {
-      height: 65vh;
-      width: 100vw;
-    }
-
-    .function-container {
-      height: 35vh;
-      width: inherit;
-
-      // screen 1
-      .buttons {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-
-        .help-button {
-          width: 90px;
-          height: 90px;
-          background-color: $palette_red;
-          margin-top: 80px;
-          border-radius: 50%;
-          box-shadow: 0 5px 4px 0px #999;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          color: $palette_white;
-          font-size: 26px;
-          font-weight: bolder;
-          line-height: 1.2;
-
-          &.ambulance-button img {
-            width: 60px;
-          }
-
-          &.police-button img {
-            width: 70px;
-          }
-
-          &.helpMe-button {
-            margin-top: 20px;
-            width: 130px;
-            height: 130px;
-          }
-        }
-      }
-
-      // screen 2
-      .gettingHelp-container {
-        width: inherit;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-        .heading {
-          color: $palette_red;
-          margin: 8px 10px;
-          font-weight: bolder;
-          display: flex;
-          justify-content: center;
-        }
-
-        .help-detail {
-          outline: 0;
-          resize: none;
-          border: 1px solid transparentize(#565656, 0.5);
-          width: calc(100% - 40px);
-          padding: 5px;
-          margin: 0 10px;
-          color: $font-color;
-          font-size: 14px;
-          min-height: 10vh;
-          max-height: 10vh;
-          border-radius: 2px;
-          box-sizing: border-box;
-          background-color: transparentize(#565656, 0.95);
-        }
-
-        .placeholder-text {
-          width: calc(100% - 60px);
-          position: absolute;
-          top: 55px;
-          left: 30px;
-          pointer-events: none;
-          line-height: 1.3;
-          font-size: 14px;
-          color: transparentize(#565656, 0.5);
-        }
-
-        .send-detail-button {
-          margin: 10px 0;
-          height: 50px;
-          border-radius: 2px;
-          width: calc(100% - 40px);
-          color: $palette_white;
-          background-color: $palette_red;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
-  }
-
+}
+body .content-container {
+  position: absolute;
+  top: 60px;
+}
+body .content-container #map {
+  height: 65vh;
+  width: 100vw;
+}
+body .content-container .function-container {
+  height: 35vh;
+  width: inherit;
+}
+body .content-container .function-container .buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+body .content-container .function-container .buttons .help-button {
+  width: 90px;
+  height: 90px;
+  background-color: #E83151;
+  margin-top: 80px;
+  border-radius: 50%;
+  box-shadow: 0 5px 4px 0px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #F9F9F9;
+  font-size: 26px;
+  font-weight: bolder;
+  line-height: 1.2;
+}
+body .content-container .function-container .buttons .help-button.ambulance-button img {
+  width: 60px;
+}
+body .content-container .function-container .buttons .help-button.police-button img {
+  width: 70px;
+}
+body .content-container .function-container .buttons .help-button.helpMe-button {
+  margin-top: 20px;
+  width: 130px;
+  height: 130px;
+}
+body .content-container .function-container .gettingHelp-container {
+  width: inherit;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body .content-container .function-container .gettingHelp-container .heading {
+  color: #E83151;
+  margin: 8px 10px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+body .content-container .function-container .gettingHelp-container .help-detail {
+  outline: 0;
+  resize: none;
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  width: calc(100% - 40px);
+  padding: 5px;
+  margin: 0 10px;
+  color: #636265;
+  font-size: 14px;
+  min-height: 10vh;
+  max-height: 10vh;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: rgba(86, 86, 86, 0.05);
+}
+body .content-container .function-container .gettingHelp-container .placeholder-text {
+  width: calc(100% - 60px);
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  pointer-events: none;
+  line-height: 1.3;
+  font-size: 14px;
+  color: rgba(86, 86, 86, 0.5);
+}
+body .content-container .function-container .gettingHelp-container .send-detail-button {
+  margin: 10px 0;
+  height: 50px;
+  border-radius: 2px;
+  width: calc(100% - 40px);
+  color: #F9F9F9;
+  background-color: #E83151;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 3px 0 #bbb;
+}
+body .content-container .function-container .help-request-container {
+  display: flex;
+  height: 35vh;
+  width: 100%;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+}
+body .content-container .function-container .help-request-container .requester-details {
+  margin: 20px auto;
+  width: calc(100% - 40px);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+body .content-container .function-container .help-request-container .requester-details .image {
+  height: 80px;
+  width: 80px;
+}
+body .content-container .function-container .help-request-container .requester-details .image img {
+  width: inherit;
+}
+body .content-container .function-container .help-request-container .requester-details .requester {
+  margin-left: 15px;
+}
+body .content-container .function-container .help-request-container .requester-details .requester .text {
+  color: #636265;
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1;
+  font-weight: bold;
+}
+body .content-container .function-container .help-request-container .requester-details .requester .name {
+  font-size: 28px;
+}
+body .content-container .function-container .help-request-container .help-options {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body .content-container .function-container .help-request-container .help-options .button {
+  height: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body .content-container .function-container .help-request-container .help-options .button img {
+  width: 30px;
+  height: 30px;
+}
+body .content-container .function-container .help-request-container .help-options .accept {
+  width: 80%;
+  background-color: #3F8D16;
+  color: #F9F9F9;
+}
+body .content-container .function-container .help-request-container .help-options .accept span {
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+body .content-container .function-container .help-request-container .help-options .accept img {
+  width: 40px;
+  height: 40px;
+}
+body .content-container .function-container .help-request-container .help-options .reject {
+  width: 20%;
+  background-color: #E83151;
 }
