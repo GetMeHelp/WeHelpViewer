@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #636265;
+  background-color: #F9F9F9;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 300px;
+  min-height: 500px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+#map {
+  height: 70vh;
+  width: 100vw;
+}
