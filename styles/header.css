@@ -1,0 +1,26 @@
+.header {
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  .hamburger-menu {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-45%);
+    display: flex;
+    align-items: center;
+    img {
+      height: 25px;
+    }
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
